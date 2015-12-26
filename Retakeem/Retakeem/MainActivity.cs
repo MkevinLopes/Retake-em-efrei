@@ -40,9 +40,8 @@ namespace Retakeem
 
                 recorder = new MediaRecorder();
 
-                Console.WriteLine("pizza3");
+
                 recorder.SetVideoSource(VideoSource.Camera);
-                Console.WriteLine("pizza3bis");
                 recorder.SetAudioSource(AudioSource.Mic);
                 Console.WriteLine("pizza3bis2");
                 recorder.SetOutputFormat(OutputFormat.Default);
