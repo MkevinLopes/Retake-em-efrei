@@ -82,17 +82,11 @@ namespace Retakeem
 			// aapt resource value: 0x7f070008
 			public const int MyButton = 2131165192;
 			
-			// aapt resource value: 0x7f07000c
-			public const int Play = 2131165196;
+			// aapt resource value: 0x7f07000b
+			public const int Record = 2131165195;
 			
 			// aapt resource value: 0x7f07000a
-			public const int Record = 2131165194;
-			
-			// aapt resource value: 0x7f07000d
-			public const int SampleVideoView = 2131165197;
-			
-			// aapt resource value: 0x7f07000b
-			public const int Stop = 2131165195;
+			public const int SampleVideoView = 2131165194;
 			
 			// aapt resource value: 0x7f070005
 			public const int continuer = 2131165189;

@@ -2,24 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <Button
-        android:id="@+id/Record"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Record" />
-    <Button
-        android:id="@+id/Stop"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Stop" />
-    <Button
-        android:id="@+id/Play"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Play" />
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:actionBarNavMode="list">
     <VideoView
         android:id="@+id/SampleVideoView"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="489.5dp"
+        android:layout_marginBottom="5.7dp"
+        android:keepScreenOn="true"
+        android:layoutDirection="locale" />
+    <Button
+        android:id="@+id/Record"
+        android:text="Play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
