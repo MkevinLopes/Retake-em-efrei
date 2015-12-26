@@ -30,11 +30,8 @@ namespace Retakeem
             var play = FindViewById<Button>(Resource.Id.Play);
             var video = FindViewById<VideoView>(Resource.Id.SampleVideoView);
 
-            Console.WriteLine("pizza");
-
             string path = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath + "/test.mp4";
 
-            Console.WriteLine("pizza2");
             record.Click += delegate {
                 video.StopPlayback();
 
@@ -43,17 +40,11 @@ namespace Retakeem
 
                 recorder.SetVideoSource(VideoSource.Camera);
                 recorder.SetAudioSource(AudioSource.Mic);
-                Console.WriteLine("pizza3bis2");
                 recorder.SetOutputFormat(OutputFormat.Default);
-                Console.WriteLine("pizza3bis3");
                 recorder.SetVideoEncoder(VideoEncoder.Default);
-                Console.WriteLine("pizza3bis4");
                 recorder.SetAudioEncoder(AudioEncoder.Default);
-                Console.WriteLine("pizza4");
                 recorder.SetOutputFile(path);
-                Console.WriteLine("pizza5");
                 recorder.SetPreviewDisplay(video.Holder.Surface);
-                Console.WriteLine("pizza6");
                 recorder.Prepare();
                 recorder.Start();
             };
