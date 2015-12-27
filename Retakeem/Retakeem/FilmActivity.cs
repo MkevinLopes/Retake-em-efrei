@@ -7,10 +7,11 @@ using Android.Widget;
 using Android.OS;
 using Android.Media;
 using System.Threading;
+using Android.Content.PM;
 
 namespace Retakeem
 {
-    [Activity(Label = "Retakeem", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Retakeem", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
     public class FilmActivity : Activity
     {
         int count = 1;
