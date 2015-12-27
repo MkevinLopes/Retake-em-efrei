@@ -11,7 +11,7 @@ using Android.Content.PM;
 
 namespace Retakeem
 {
-    [Activity(Label = "Retakeem", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "Retakeem", MainLauncher = true, Icon = "@drawable/chaise", ScreenOrientation = ScreenOrientation.Portrait)]
     public class FilmActivity : Activity
     {
         int count = 1;

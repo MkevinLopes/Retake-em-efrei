@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:actionBarNavMode="list">
+    tools:actionBarNavMode="list"
+    android:background="@android:color/white">
     <VideoView
         android:id="@+id/SampleVideoView"
         android:layout_width="fill_parent"
