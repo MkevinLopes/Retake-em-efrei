@@ -86,13 +86,10 @@
     <AndroidResource Include="Resources\values\theme.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\20151203_134838.jpg" />
+    <AndroidResource Include="Resources\drawable\Actualite.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Actualité.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Bouton choix aléatoire.png" />
+    <AndroidResource Include="Resources\drawable\Bouton_choix_aleatoire.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Chaise.png" />
@@ -113,7 +110,7 @@
     <AndroidResource Include="Resources\drawable\Options.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Roulot_sur_le_coté_du_menu.png" />
+    <AndroidResource Include="Resources\drawable\Roulot_sur_le_cote_du_menu.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Terminer.png" />

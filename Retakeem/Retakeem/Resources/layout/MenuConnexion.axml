@@ -38,8 +38,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginBottom="105.2dp"
         android:background="@android:color/white"
-        android:layout_marginRight="25"
-        android:layout_marginTop="dp" />
+        android:layout_marginRight="25dp" />
     <EditText
         android:inputType="textEmailAddress"
         android:layout_width="match_parent"
