@@ -8,16 +8,18 @@ using Android.OS;
 using Android.Media;
 using System.Threading;
 using Android.Content.PM;
+using Android.Util;
+using Android.Hardware;
 
 namespace Retakeem
 {
     [Activity(Label = "Retakeem", MainLauncher = true, Icon = "@drawable/chaise", ScreenOrientation = ScreenOrientation.Portrait)]
     public class FilmActivity : Activity
     {
-        int count = 1;
+        //int count = 1;
         MediaRecorder recorder;
         Boolean isStoped = false;
-
+        Camera camera;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -31,9 +33,9 @@ namespace Retakeem
             var record = FindViewById<Button>(Resource.Id.Record);
             //var stop = FindViewById<Button>(Resource.Id.Stop);
             //var play = FindViewById<Button>(Resource.Id.Play);
-            var video = FindViewById<VideoView>(Resource.Id.SampleVideoView);
+            var video = FindViewById<VideoView>(Resource.Id.surface);
 
-            string path = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath + "/test.mp4";
+            string path = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath + "/Retakem.mp4";
 
 
             /*stop.Click += delegate {
@@ -45,34 +47,42 @@ namespace Retakeem
                 }
             };*/
 
+            camera = Camera.Open();
+            camera.SetDisplayOrientation(90);
+            camera.Unlock();
+
 
             record.Click += delegate {
                 video.StopPlayback();
-
                 recorder = new MediaRecorder();
-
-
+                recorder.SetCamera(camera);
                 recorder.SetVideoSource(VideoSource.Camera);
-                recorder.SetAudioSource(AudioSource.Mic);
-                recorder.SetOutputFormat(OutputFormat.Default);
-                recorder.SetVideoEncoder(VideoEncoder.Default);
-                recorder.SetAudioEncoder(AudioEncoder.Default);
+                recorder.SetAudioSource(AudioSource.Camcorder);
+                recorder.SetOutputFormat(OutputFormat.Mpeg4);
+                recorder.SetVideoEncoder(VideoEncoder.Mpeg4Sp);
+                recorder.SetAudioEncoder(AudioEncoder.HeAac);
                 recorder.SetOutputFile(path);
                 recorder.SetPreviewDisplay(video.Holder.Surface);
+                recorder.SetOrientationHint(90);
                 recorder.Prepare();
                 recorder.Start();
 
                 Thread.Sleep(15000);
 
-                if (! isStoped)
+                if (recorder != null)
                 {
-                    if (recorder != null)
-                    {
-                        isStoped = true;
-                        recorder.Stop();
-                        recorder.Release();
-                    }
+                    isStoped = true;
+                    recorder.Stop();
+                    recorder.Release();
+                    recorder.Dispose();
+                    recorder = null;
+                    camera.StopPreview();
+                    camera.Release();
+                    camera.Dispose();
                 }
+                var uri = Android.Net.Uri.Parse(path);
+                video.SetVideoURI(uri);
+                //video.Start();
 
             };
 

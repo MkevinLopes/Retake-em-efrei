@@ -118,9 +118,6 @@ namespace Retakeem
 			// aapt resource value: 0x7f07000a
 			public const int Record = 2131165194;
 			
-			// aapt resource value: 0x7f070009
-			public const int SampleVideoView = 2131165193;
-			
 			// aapt resource value: 0x7f070003
 			public const int date = 2131165187;
 			
@@ -147,6 +144,9 @@ namespace Retakeem
 			
 			// aapt resource value: 0x7f070002
 			public const int password = 2131165186;
+			
+			// aapt resource value: 0x7f070009
+			public const int surface = 2131165193;
 			
 			static Id()
 			{
