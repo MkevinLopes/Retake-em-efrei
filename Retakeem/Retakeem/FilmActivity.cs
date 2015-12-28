@@ -11,9 +11,10 @@ using Android.Content.PM;
 using Android.Util;
 using Android.Hardware;
 
+
 namespace Retakeem
 {
-    [Activity(Label = "Retakeem", MainLauncher = true, Icon = "@drawable/chaise", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "FilmActivity", MainLauncher = true, Icon = "@drawable/chaise", ScreenOrientation = ScreenOrientation.Portrait)]
     public class FilmActivity : Activity
     {
         //int count = 1;
@@ -83,7 +84,8 @@ namespace Retakeem
                 var uri = Android.Net.Uri.Parse(path);
                 video.SetVideoURI(uri);
                 //video.Start();
-
+                Intent intent = new Intent(this, typeof(VideoReadActivity));
+                StartActivity(intent);
             };
 
            /* play.Click += delegate {

@@ -7,11 +7,12 @@
     tools:actionBarNavMode="list"
     android:background="@android:color/white">
     <VideoView
-        android:layout_width="330.3dp"
-        android:layout_height="495.9dp"
+        android:layout_width="387.9dp"
+        android:layout_height="512.8dp"
         android:id="@+id/surface"
         android:layout_marginBottom="0.0dp"
-        android:layout_marginLeft="26.8dp" />
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp" />
     <Button
         android:id="@+id/Record"
         android:text="Play"
