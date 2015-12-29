@@ -21,6 +21,7 @@ namespace Retakeem
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.LecteurVideoPrise);
+
             var videoView = FindViewById<VideoView>(Resource.Id.videoView1);
             var continuer = FindViewById<Button>(Resource.Id.Continuer);
             var abandonner = FindViewById<Button>(Resource.Id.abandonner);

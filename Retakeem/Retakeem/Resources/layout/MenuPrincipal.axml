@@ -5,10 +5,87 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:minWidth="25px"
-    android:minHeight="25px">
-    <ImageView
-        android:src="@drawable/roulot_sur_le_cote_du_menu"
-        android:layout_width="183.6dp"
-        android:layout_height="525.6dp"
-        android:id="@+id/imageView1" />
+    android:minHeight="25px"
+    android:id="@+id/linearLayout1">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="558.4dp"
+        android:id="@+id/tableLayout1">
+        <TableRow
+            android:id="@+id/tableRow1">
+            <ImageView
+                android:src="@drawable/roulot_sur_le_cote_du_menu"
+                android:layout_column="0"
+                android:id="@+id/imageView1"
+                android:layout_marginBottom="80.4dp"
+                android:layout_height="505.6dp"
+                android:layout_width="155.3dp" />
+            <TableLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_column="2"
+                android:id="@+id/tableLayout2"
+                android:layout_height="393.9dp">
+                <TableRow
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:id="@+id/tableRow10">
+                    <ImageButton
+                        android:src="@android:color/white"
+                        android:layout_column="0"
+                        android:id="@+id/imageButton1"
+                        android:layout_height="147.3dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:minWidth="25px"
+                    android:minHeight="25px">
+                    <ImageButton
+                        android:src="@drawable/jouer"
+                        android:layout_column="0"
+                        android:id="@+id/jouer"
+                        android:layout_marginBottom="45.0dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow6"
+                    android:minWidth="25px"
+                    android:minHeight="25px">
+                    <ImageButton
+                        android:src="@drawable/filmer"
+                        android:layout_column="0"
+                        android:id="@+id/filmer"
+                        android:layout_marginBottom="45dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow7">
+                    <ImageButton
+                        android:src="@drawable/options"
+                        android:layout_column="0"
+                        android:id="@+id/options"
+                        android:background="@android:color/white"
+                        android:layout_marginBottom="34.4dp" />
+                </TableRow>
+                <TableRow
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:id="@+id/tableRow9">
+                </TableRow>
+            </TableLayout>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow8">
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2">
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3">
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4">
+        </TableRow>
+    </TableLayout>
 </LinearLayout>

@@ -14,7 +14,7 @@ using Android.Hardware;
 
 namespace Retakeem
 {
-    [Activity(Label = "FilmActivity", MainLauncher = true, Icon = "@drawable/chaise", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "FilmActivity", ScreenOrientation = ScreenOrientation.Portrait)]
     public class FilmActivity : Activity
     {
         //int count = 1;

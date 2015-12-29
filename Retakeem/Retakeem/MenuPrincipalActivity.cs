@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Retakeem
 {
-    [Activity(Label = "MenuPrincipalActivity")]
+    [Activity(Label = "MenuPrincipalActivity", MainLauncher = true, Icon = "@drawable/chaise")]
     public class MenuPrincipalActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -20,6 +20,16 @@ namespace Retakeem
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.MenuPrincipal);
+
+            var jouer = FindViewById<ImageButton>(Resource.Id.jouer);
+            var filmer = FindViewById<ImageButton>(Resource.Id.filmer);
+            var options = FindViewById<ImageButton>(Resource.Id.options);
+
+            filmer.Click += delegate
+            {
+                Intent intent = new Intent(this, typeof(FilmActivity));
+                StartActivity(intent);
+            };
         }
     }
 }
